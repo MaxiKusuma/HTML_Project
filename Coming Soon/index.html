@@ -1,0 +1,218 @@
+<!doctype html><html lang="en" dir="ltr"><head>
+    <meta charset="utf-8">
+    <title>Coming Soon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css" id="dcoder_stylesheet">*{
+  font-family: "montserrat",sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.page{
+  background: #f1f1f1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col{
+  flex: 1;
+  height: 100vh;
+  position: relative;
+}
+.countdown-col{
+  background: url(slide.jpg) no-repeat center;
+  background-size: cover;
+}
+.time{
+  color: #fff;
+  text-transform: uppercase;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.middle{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.middles{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.time span{
+  padding: 0 14px;
+  font-size: 10px;
+}
+.time span div{
+  font-size: 40px;
+}
+
+.newsletter{
+  width: 90%;
+}
+.newsletter h4{
+  font-style: italic;
+  font-size: 12px;
+}
+.newsletter input{
+  display: block;
+  margin: 12px auto;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+.newsletter-btn{
+  background: linear-gradient(125deg,#3498db,#34495e);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.newsletter-btn:hover{
+  opacity: .7;
+}
+
+@media screen and (max-width :900px){
+  .col{
+    flex: 100%;
+  }
+}
+h3{
+	justify-content: align-center;
+	color: ;
+	font-size: 30px;
+	font-weight: ;
+	margin-top: 60%;
+	line-height: 18px;
+	margin-left: 5px;
+}</style></head>
+  <body>
+    <div class="page">
+      <div class="countdown-col col">
+      <h3></h3>
+        <div class="time middle">
+          <span>
+            <div id="d">12</div>
+            Days
+          </span>
+          <span>
+            <div id="h">06</div>
+            Hours
+          </span>
+          <span>
+            <div id="m">35</div>
+            Minutes
+          </span>
+          <span>
+            <div id="s">54</div>
+            Seconds
+          </span>
+        </div>
+      </div>
+      
+<script type="text/javascript" id="kamu">
+var comingdates = new Date("Jan 1, 2022 02:00:00");
+
+var d = document.getElementById('d');
+var h = document.getElementById('h');
+var m = document.getElementById('m');
+var s = document.getElementById('s');
+
+var x = setInterval(function(){
+  var now = new Date();
+
+  var jan = comingdates.getTime() - now.getTime();
+  
+  var days = Math.floor(jan/(1000 * 60 * 60 * 24));
+  var hours = Math.floor(jan%(1000 * 60 * 60 * 24) / (1000 * 60 *60));
+  var mins = Math.floor(jan%(1000 * 60 * 60) / (1000 * 60));
+  var secs = Math.floor(jan%(1000 * 60) / 1000);
+
+  d.innerHTML = getTrueNumber(days);
+  h.innerHTML = getTrueNumber(hours);
+  m.innerHTML = getTrueNumber(mins);
+  s.innerHTML = getTrueNumber(secs);
+
+  if(jan <= 0) clearInterval(x);
+
+},1000);
+
+function getTrueNumber(x) {
+  if (x<10) return '0'+x;
+  else return x;
+}
+    </script>
+
+
+      <div class="time middles">
+          <span>
+            <div id="a">12</div>
+            Days
+          </span>
+          <span>
+            <div id="b">06</div>
+            Hours
+          </span>
+          <span>
+            <div id="c">35</div>
+            Minutes
+          </span>
+          <span>
+            <div id="e">54</div>
+            Seconds
+          </span>
+        </div>
+      </div>
+      
+      <div class="newsletter-col col">
+        <div class="newsletter middle">
+          <h2>We Will Coming Soon</h2>
+          <h4>Subscribe to get notification when we start</h4>
+          <form action="">
+            <input type="text" placeholder="Enter Your Email">
+            <input class="newsletter-btn" type="button" value="Subscribe">
+          </form>
+        </div>
+      </div>
+
+
+<script type="text/javascript" id="apa_script">
+var comingdate = new Date("Jan 1, 2021 01:00:00");
+
+var a = document.getElementById('a');
+var b = document.getElementById('b');
+var c = document.getElementById('c');
+var e = document.getElementById('e');
+
+var x = setInterval(function(){
+  var now = new Date();
+
+  var des = comingdate.getTime() - now.getTime();
+  
+  var days = Math.floor(des/(1000 * 60 * 60 * 24));
+  var hours = Math.floor(des%(1000 * 60 * 60 * 24) / (1000 * 60 *60));
+  var mins = Math.floor(des%(1000 * 60 * 60) / (1000 * 60));
+  var secs = Math.floor(des%(1000 * 60) / 1000);
+
+  a.innerHTML = getTrueNumber(days);
+  b.innerHTML = getTrueNumber(hours);
+  c.innerHTML = getTrueNumber(mins);
+  e.innerHTML = getTrueNumber(secs);
+
+  if(des <= 0) clearInterval(x);
+
+},1000);
+
+function getTrueNumber(x) {
+  if (x<10) return '0'+x;
+  else return x;
+}
+    </script></body></html>
